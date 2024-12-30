@@ -161,58 +161,43 @@ transition: 0.5s ease-in-out;
 
 
 /* About Section Design */
-
-.about {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;    /* Align vertically */
-    gap: 2rem;
-    background: var(--snd-bg-color);
-    flex-wrap: wrap;        /* Ensure responsiveness */
-}
-
-.about-img {
-    flex: 1;                /* Allow image container to grow/shrink */
-    display: flex;
-    justify-content: center;
-}
-
-
-.about-img img {
-    width: 25vw;
-    border: 2.5px solid var(--main-color);
-    border-radius: 10px;
-}
-
-.about-img img:hover{
-    box-shadow: 0 0 1.6rem #ff0060;
-    transition:0.5s ease;
-}
-
-.heading{
-    text-align: center;
-    font-size: 4rem;
-}
-
-.about-content {
-    flex: 2;                /* Allow text container to grow/shrink */
-    padding: 0 2rem;        /* Adjust padding for better responsiveness */
-}
-
-.about-content p {
-    font-size: 1.6rem;
-    margin: 1rem 0 1rem;
-}
-
 @media (max-width: 768px) {
     .about {
-        flex-direction: column; /* Stack content vertically on smaller screens */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;    /* Center elements in the column layout */
+        gap: 1.5rem;            /* Add spacing between image and text */
+    }
+
+    .about-img {
+        width: 100%;            /* Allow the image container to occupy full width */
+        display: flex;
+        justify-content: center; /* Center the image in its container */
+    }
+
+    .about-img img {
+        width: 70%;             /* Reduce image size for better fit */
+        max-width: 300px;       /* Add a maximum width to maintain proportions */
+        border-radius: 10px;    /* Retain rounded corners */
     }
 
     .about-content {
-        padding: 0 1rem;
+        width: 90%;             /* Make text container responsive to screen size */
+        text-align: center;     /* Center-align text for better readability */
+        padding: 0;             /* Remove extra padding */
+    }
+
+    .about-content h3 {
+        font-size: 2rem;        /* Adjust heading size for mobile */
+        margin-bottom: 1rem;
+    }
+
+    .about-content p {
+        margin: 1rem 0;         /* Add spacing around text */
+        font-size: 1.4rem;      /* Slightly reduce font size for mobile */
+        line-height: 1.6;       /* Improve readability with better line height */
     }
 }
+
 
 /* Services Section Design */
 
